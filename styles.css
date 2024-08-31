@@ -1,0 +1,150 @@
+html {
+    overflow: auto;
+    scrollbar-gutter: stable;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scrollbar-gutter: stable;
+}
+main {
+    flex: 1;
+}
+table {
+    max-width: 1000px;
+}
+td {
+    padding: 10px;
+}
+h1 {
+    font-family: Arial;
+    border: 2px #000000;
+    color: #24d363;
+    text-align: center;
+    padding: 10px;
+}
+h2, h3, h4{
+    font-family: Arial;
+    color : #FFFFFF
+}
+.header {
+    margin: 0;
+    padding: 10px;
+    /* Set the height of the header to 100% of the viewport height */
+    width: 100%;
+    background-color: #141414;
+    box-sizing: border-box;
+    text-align: center;
+}
+.footer{
+    margin: 0;
+    padding: 5px;
+    /* Set the height of the header to 100% of the viewport height */
+    width: 100%;
+    background-color: #141414;
+    box-sizing: border-box;
+}
+p {
+    font-family: Arial;
+    color: #FFFFFF;
+    font-size: smaller;
+}
+.header .button-container {
+    width: 1000px; /* Match the width of .notblank */
+    margin: 0 auto; /* Center the container */
+    padding: 10px 0; /* Optional padding for spacing */
+}
+.header .button-container button {
+    width: 320px; /* Button width */
+    margin: 5px; /* Space between buttons */
+}
+button {
+    margin: 0; /* Remove any default margin */
+    padding: 10px; /* Adjust padding as needed */
+    border: none;
+    background-color: #141414; /* Example button color */
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+button:hover {
+    background-color: #24d363;
+    color: white;
+}
+.blank {
+    background-color: black
+}
+.notblank{
+    border-radius: 8px;
+    max-width: 1000px; /* Ensures the cell doesn't exceed 1000px */
+    overflow: hidden; /* Hide any overflow */
+    background-color: #141414;
+}
+/* Container for horizontal scrolling */
+.scroll-container {
+    display: flex;                /* Enable flexbox */
+    overflow-x: auto;             /* Enable horizontal scrolling */
+    white-space: nowrap;          /* Prevent wrapping to the next line */
+    padding: 0px;                /* Optional padding */
+    background-color: #141414;    /* Optional background color */
+    height: 250px;
+    max-width: 976.8px;
+}
+/* Style for grid items */
+.grid-item {
+    flex: 0 0 auto;               /* Prevent items from shrinking or growing */
+    flex-direction: column;
+    width: 180px;                 /* Set a fixed width */
+    height: 220px;                /* Set a fixed height */
+    margin-right: 10px;           /* Space between items */
+    color: #FFFFFF;                 /* Text color */
+    display: flex;                /* Center text inside */
+    align-items: center;          /* Vertical alignment */
+    justify-content: center;      /* Horizontal alignment */
+    font-size: 16px;              /* Text size */
+    border-radius: 8px;           /* Rounded corners */
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.grid-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+}
+.grid-item .pfp {
+    border-radius: 50%;
+}
+.grid-item .stats {
+    font-size: smaller;      /* Smaller font size for stats */
+    overflow: hidden;        /* Hide overflow */
+    text-overflow: ellipsis; /* Display ellipsis for overflowed text */
+    white-space: normal;     /* Prevent text from wrapping */
+}
+.grid-item div {
+    text-overflow: ellipsis;      /* Display ellipsis for overflowed text */
+    overflow: hidden;             /* Hide overflowed content */
+    white-space: nowrap;          /* Prevent text from wrapping */
+    width: 100%;                   /* Ensure the text container spans the width */
+}
+.login {
+    width: 500px;
+    padding: 20px;
+    font-size: x-large;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
