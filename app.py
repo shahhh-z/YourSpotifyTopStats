@@ -227,8 +227,8 @@ def stats():
     timeRange = request.args.get('timeRange', 'short_term')
     
     # Create a dictionary with the info for each artist and song.
-    songsWithInfo = {song.get("id", None): {'image': song.get("album", {}).get("images", [{}])[0].get("url", None), 'name': song.get("name", None)} for song in getSongs(timeRange)}
-    artistsWithInfo = {artist.get("id", None): {'image': artist.get("images", [{}])[0].get("url", None), 'name': artist.get("name", None)} for artist in getArtists(timeRange)}
+    songsWithInfo = {song.get("id", None): {'image': song.get("album", {}).get("images", [{}])[0].get("url", None), 'name': song.get("name", None), "link": song.get("external_urls", {}).get("spotify", None)} for song in getSongs(timeRange)}
+    artistsWithInfo = {artist.get("id", None): {'image': artist.get("images", [{}])[0].get("url", None), "name": artist.get("name", None), "link": artist.get("external_urls", {}).get("spotify", None)} for artist in getArtists(timeRange)}
 
     # Display the stats page with the song and artist dictionaries.
     return render_template(
