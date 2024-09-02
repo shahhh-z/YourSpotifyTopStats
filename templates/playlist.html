@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\..\static\css\styles.css">
+    <title>Create Playlist | Your Spotify Top Stats</title>
+</head>
+<body>
+    <div class="header">
+        <h1 style="text-align: center;">Welcome to Your Spotify Top Stats!</h1>
+        <div class="button-container">
+            <a href="home"><button type="button">Home</button></a>
+            <a href="stats"><button type="button">View Stats</button></a>
+            <a href="playlist"><button type="button">Create Playlist</button></a>
+            <a href="logout"><button type="button">Log Out</button></a>
+        </div>
+    </div>
+    <main>
+    <table style="width: 1000px; margin-left: auto; margin-right: auto;" border="0">
+    <form action="{{ url_for('submit') }}" method="post">
+        <tbody>
+        <tr>
+            <td colspan="3" class="blank"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="notblank">
+                <h2 style="text-align: left;">Create Playlist</h2>
+                {% if message != "Playlist Created" %}
+                <h4>
+                <label for="timeRange">Select Time Range:</label>
+                    <select id="timeRange" name="timeRange">
+                        <option value="short_term">Past 4 Weeks</option>
+                        <option value="medium_term">Past 6 Months</option>
+                        <option value="long_term">Past Year</option>
+                    </select>
+                </h4>
+                {%endif%}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="blank"></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                {% if message != "Playlist Created" %}
+                    <div class="button-container">
+                        <button type="submit" class="bigbutton">Create Playlist</button>
+                    </div>
+                {% else %}
+                    <h2 style="text-align: center">{{message}}</h2>
+                {%endif%}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="blank"></td>
+        </tr>
+        </tbody>
+    </form>
+    </table>
+    </main>
+    <div class="footer">
+        <p style="text-align: center;">Created by @shahhh-z on GitHub</p>
+    </div>
+</body>
+</html>
