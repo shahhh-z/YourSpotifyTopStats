@@ -294,11 +294,13 @@ def submit():
 
 
 """
-logout: Pop the info stored in session and display the login page.
+logout: Pop the info stored in session and log out.
 """
 @app.route('/logout')
 def logout():
-    session.pop('userID', None)
-    session.pop('refresh_token', None)
-    session.pop('access_token', None)
-    return redirect(url_for('index'))
+    # Clear the session to remove all data.
+    session.clear()
+  
+    # Redirect the user to Spotify's logout page.
+    spotify_logout_url = 'https://accounts.spotify.com/logout'
+    return redirect(spotify_logout_url + '?continue=' + url_for('index', _external=True))
