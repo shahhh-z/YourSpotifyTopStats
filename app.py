@@ -11,6 +11,7 @@ import requests
 import secrets
 import os
 from dotenv import load_dotenv
+from datetime import datetime
 
 
 # Load in the sensitive information.
@@ -265,10 +266,13 @@ def submit():
         case "short_term":
             description = "4 weeks"
     
+    # Get the current time and format it.
+    current_time = datetime.now().strftime("%B %d, %Y, %H:%M")
+    
     # Create the playlist.
     playlistData = {
-    'name': f"Your Top Songs ({description})",
-    'description': f"Your top songs of the past {description}!",
+    'name': f"Your Top Songs (past {description})",
+    'description': f"Your top songs of the past {description}! Playlist created on {current_time}.",
     'public': False
     }
     newPlaylist = postResponse(f"https://api.spotify.com/v1/users/{getUserID()}/playlists", playlistData).json()
@@ -300,7 +304,7 @@ logout: Pop the info stored in session and log out.
 def logout():
     # Clear the session to remove all data.
     session.clear()
-  
+
     # Redirect the user to Spotify's logout page.
     spotify_logout_url = 'https://accounts.spotify.com/logout'
     return redirect(spotify_logout_url + '?continue=' + url_for('index', _external=True))
