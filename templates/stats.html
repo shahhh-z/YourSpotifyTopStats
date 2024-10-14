@@ -50,7 +50,7 @@
                 {% for song, details in top_songs.items() %}
                     <div class="grid-item">
                         <a href="{{ details.link }}" target="_blank"><img src="{{ details.image }}" alt="Song Image" title="{{ details.name }}"></a>
-                        <div>{{ loop.index }}. {{ details.name }}</div>
+                        <div><p class="list-text">{{ loop.index }}. {{ details.name }}</p></div>
                     </div>
                 {% endfor %}
             </div>
@@ -66,7 +66,7 @@
                 {% for artist, details in top_artists.items() %}
                     <div class="grid-item">
                         <a  href="{{ details.link }}" target="_blank"><img src="{{ details.image }}" alt="Artist Image" title="{{ details.name }}" class="pfp"></a>
-                        <div>{{ loop.index }}. {{ details.name }}</div>
+                        <div><p class="list-text">{{ loop.index }}. {{ details.name }}</p></div>
                     </div>
                 {% endfor %}
             </div>
