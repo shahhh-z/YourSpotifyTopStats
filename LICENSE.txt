@@ -1,3 +1,10 @@
 Copyright Shahob Zekria 2024
 
-Permission is granted to view and run this code on your own machine. However, you may not distribute, modify, or claim this code as your own without explicit permission from the author.
+Permission is granted to view the content of this website for personal, non-commercial use only. You may not:
+
+  - Copy, distribute, or share any part of the website's code, design, or content.
+  - Modify or create derivative works based on the website's code or content.
+  - Run or execute the website's code outside of its intended purpose on this website.
+  - Use any part of this website’s code or design for commercial purposes without explicit permission from the author.
+
+Any unauthorized use of the content, code, or design is strictly prohibited.
