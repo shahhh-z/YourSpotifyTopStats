@@ -1,6 +1,7 @@
 html {
     overflow: auto;
     scrollbar-gutter: stable;
+    scrollbar-color: #24d363 #141414;
 }
 html, body {
     height: 100%;
@@ -44,17 +45,28 @@ h2, h3, h4{
     box-sizing: border-box;
     text-align: center;
 }
-.footer{
-    margin: 0;
+.footer {
+    margin-top: auto;
     padding: 5px;
     width: 100%;
     background-color: #141414;
     box-sizing: border-box;
 }
+select {
+    background-color: #141414;
+    color: white;
+    border: 1px solid #24d363;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: Arial;
+}
 p {
     font-family: Arial;
     color: #FFFFFF;
     font-size: smaller;
+}
+.list-text {
+    font-weight: bold;
 }
 .header .button-container {
     width: 1000px;
@@ -76,7 +88,7 @@ button {
 }
 button:hover {
     background-color: #24d363;
-    color: white;
+    color: black;
 }
 .blank {
     background-color: black
