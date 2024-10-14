@@ -1,0 +1,3 @@
+Copyright Shahob Zekria 2024
+
+Permission is granted to view and run this code on your own machine. However, you may not distribute, modify, or claim this code as your own without explicit permission from the author.
