@@ -1,6 +1,7 @@
 This website displays a Spotify user's top stats and allows the creation of Spotify playlists that contain the user's top songs.
 
 URL: https://shahhhz.pythonanywhere.com/
+If the website does not load at first, reload the page.
 
 Here is a demonstration of how the website should run:
 
