@@ -1,7 +1,7 @@
 html {
     overflow: auto;
     scrollbar-gutter: stable;
-    scrollbar-color: #24d363 #141414;
+/*     scrollbar-color: #24d363 #141414; */
 }
 html, body {
     height: 100%;
@@ -156,3 +156,4 @@ button:hover {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
